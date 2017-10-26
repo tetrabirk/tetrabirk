@@ -1,4 +1,3 @@
-<?php wp_footer(); ?>
 
 <!-- Footer -->
 <footer id="footer" class="footer bg-black-222">
@@ -49,7 +48,7 @@
                     <ul class="list angle-double-right list-border">
                         <li><a href="#">Body Building</a></li>
                         <li><a href="#">Fitness Classes</a></li>
-                        <li><a href="#">Weight lifting</a></li>
+                        <li><a href="#">Your Service Title</a></li>
                         <li><a href="#">Yoga Courses</a></li>
                         <li><a href="#">Training</a></li>
                     </ul>

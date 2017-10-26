@@ -13,8 +13,6 @@
     <!-- Page Title -->
     <title>HealthZone - Daring Multi Concept Theme for Medical, Nursing, Yoga, Sports, Gym & Fitness</title>
 
-    <?php wp_head() ?>
-
     <!-- Favicon and Touch Icons -->
     <link href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon.png" rel="shortcut icon" type="image/png">
     <link href="<?php echo get_stylesheet_directory_uri() ?>/images/apple-touch-icon.png" rel="apple-touch-icon">
@@ -32,7 +30,7 @@
     <!-- CSS | Main style file -->
     <link href="<?php echo get_stylesheet_directory_uri() ?>/css/style-main.css" rel="stylesheet" type="text/css">
     <!-- CSS | Theme Color -->
-    <link href="<?php echo get_stylesheet_directory_uri() ?>/css/colors/theme-skin-sky-blue-light.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo get_stylesheet_directory_uri() ?>/css/colors/theme-skin-sky-blue.css" rel="stylesheet" type="text/css">
     <!-- CSS | Preloader Styles -->
     <link href="<?php echo get_stylesheet_directory_uri() ?>/css/preloader.css" rel="stylesheet" type="text/css">
     <!-- CSS | Custom Margin Padding Collection -->
@@ -40,7 +38,7 @@
     <!-- CSS | Responsive media queries -->
     <link href="<?php echo get_stylesheet_directory_uri() ?>/css/responsive.css" rel="stylesheet" type="text/css">
     <!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
-    <!-- <link href="<?php echo get_stylesheet_directory_uri() ?>/css/style.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
 
     <!-- external javascripts -->
     <script src="<?php echo get_stylesheet_directory_uri() ?>/js/jquery-2.1.4.min.js"></script>
@@ -76,6 +74,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
+
 <body class="">
 <div id="wrapper">
     <!-- preloader -->
@@ -130,9 +130,15 @@
         <div class="header-nav">
             <div class="header-nav-wrapper navbar-scrolltofixed bg-lighter">
                 <div class="container">
-                    <nav id="menuzord-right" class="menuzord orange no-bg"> <a class="menuzord-brand pull-left flip" href="javascript:void(0)"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-wide.png" alt=""></a>
+                    <nav id="menuzord-right" class="menuzord orange no-bg"> <a class="menuzord-brand pull-left flip" href="<?php echo get_stylesheet_directory_uri() ?>/javascript:void(0)"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-wide.png" alt=""></a>
                         <ul class="menuzord-menu onepage-nav">
                             <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#departments">Departments</a></li>
+                            <li><a href="#doctors">Doctors</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
