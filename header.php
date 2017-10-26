@@ -10,6 +10,8 @@
     <meta name="keywords" content="building,business,construction,cleaning,transport,workshop" />
     <meta name="author" content="ThemeMascot" />
 
+    <?php wp_head()?>
+
     <!-- Page Title -->
     <title>HealthZone - Daring Multi Concept Theme for Medical, Nursing, Yoga, Sports, Gym & Fitness</title>
 

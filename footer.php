@@ -1,5 +1,6 @@
 
 <!-- Footer -->
+
 <footer id="footer" class="footer bg-black-222">
     <div class="container pb-50">
         <div class="row border-bottom-black">
@@ -136,6 +137,7 @@
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 </div>
 <!-- end wrapper -->
+<?php wp_footer()?>
 
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->

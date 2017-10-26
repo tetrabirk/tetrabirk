@@ -1,4 +1,4 @@
- var THEMEMASCOT = THEMEMASCOT || {};
+var THEMEMASCOT = THEMEMASCOT || {};
 
 (function($) {
     "use strict";
@@ -83,14 +83,14 @@
                 if (bmi >40) {
                     info = "very severely obese";
                 }
-                output = "Your BMI is <span>"  + bmi + "</span><br />" + 
-                                                              "You are <span>"  + info + "</span>.";
+                output = "Your BMI is <span>"  + bmi + "</span><br />" +
+                    "You are <span>"  + info + "</span>.";
             } else {
                 output = "You broke it!";
             };
             return output;
         },
-        
+
         calculateStandard: function (bmi_form) {
             var weight_lbs = bmi_form.find('input[name="bmi_standard_weight_lbs"]').val();
             var height_ft = bmi_form.find('input[name="bmi_standard_height_ft"]').val();
@@ -104,7 +104,7 @@
 
             bmi_form.find('#bmi_standard_calculator_form_result').html(output).fadeIn('slow');
         },
-        
+
         calculateMetric: function (bmi_form) {
             var weight_kg = bmi_form.find('input[name="bmi_metric_weight_kg"]').val();
             var height_cm = bmi_form.find('input[name="bmi_metric_height_cm"]').val();
@@ -118,7 +118,7 @@
 
             bmi_form.find('#bmi_metric_calculator_form_result').html(output).fadeIn('slow');
         },
-        
+
         init: function () {
             var bmi_Standard_Form = $('#form_bmi_standard_calculator');
             bmi_Standard_Form.on('submit', function(e) {
@@ -144,8 +144,6 @@
             THEMEMASCOT.initialize.TM_select2();
             THEMEMASCOT.initialize.TM_datePicker();
             THEMEMASCOT.initialize.TM_onLoadModal();
-            THEMEMASCOT.initialize.TM_loadBSParentModal();
-            THEMEMASCOT.initialize.TM_demoSwitcher();
             THEMEMASCOT.initialize.TM_platformDetect();
             THEMEMASCOT.initialize.TM_customDataAttributes();
             THEMEMASCOT.initialize.TM_parallaxBgInit();
@@ -245,20 +243,6 @@
             }
         },
 
-        /* ---------------------------------------------------------------------- */
-        /* ------------------------ Bootstrap Parent Modal  --------------------- */
-        /* ---------------------------------------------------------------------- */
-        TM_loadBSParentModal: function() {
-            var ajaxLoadContent = true;
-            if( ajaxLoadContent ) {
-                $.ajax({
-                    url: "ajax-load/bootstrap-parent-modal.html",
-                    success: function (data) { $('body').append(data); },
-                    dataType: 'html'
-                });
-            }
-        },
-        
         /* ---------------------------------------------------------------------- */
         /* ------------------------------ demo switcher    ---------------------- */
         /* ---------------------------------------------------------------------- */
@@ -380,7 +364,7 @@
         /* ----------------------------- Magnific Popup ------------------------- */
         /* ---------------------------------------------------------------------- */
         TM_magnificPopup_lightbox: function() {
-            
+
             $('.image-popup-lightbox').magnificPopup({
                 type: 'image',
                 closeOnContentClick: true,
@@ -464,9 +448,9 @@
                         return element.find('img');
                     }
                 }
-                
+
             });
-            
+
             $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
                 disableOn: 700,
                 type: 'iframe',
@@ -510,7 +494,7 @@
             });
 
             $('.form-ajax-load').magnificPopup({
-              type: 'ajax'
+                type: 'ajax'
             });
 
             var $ajaxMagnificLightbox = $('[data-lightbox="ajax"]');
@@ -528,7 +512,7 @@
                     }
                 });
             }
-            
+
             $('.popup-with-form').magnificPopup({
                 type: 'inline',
                 preloader: false,
@@ -541,13 +525,13 @@
                 // When elemened is focused, some mobile browsers in some cases zoom in
                 // It looks not nice, so we disable it:
                 callbacks: {
-                  beforeOpen: function() {
-                    if($(window).width() < 700) {
-                      this.st.focus = false;
-                    } else {
-                      this.st.focus = '#name';
+                    beforeOpen: function() {
+                        if($(window).width() < 700) {
+                            this.st.focus = false;
+                        } else {
+                            this.st.focus = '#name';
+                        }
                     }
-                  }
                 }
             });
 
@@ -593,11 +577,11 @@
                             preload: [0,1] // Will preload 0 - before current, and 1 after the current image
                         },
                         zoom: {
-                          enabled: true,
-                          duration: 300, // don't foget to change the duration also in CSS
-                          opener: function(element) {
-                            return element.find('img');
-                          }
+                            enabled: true,
+                            duration: 300, // don't foget to change the duration also in CSS
+                            opener: function(element) {
+                                return element.find('img');
+                            }
                         }
 
                     });
@@ -635,7 +619,7 @@
                 hook: 'data-rel',
                 animation_speed:'normal',
                 theme:'light_square',
-                slideshow:3000, 
+                slideshow:3000,
                 autoplay_slideshow: false,
                 social_tools: false
             });
@@ -823,7 +807,7 @@
                 e.preventDefault();
 
                 var $anchor = $(this);
-                
+
                 var $hearder_top = $('.header .header-nav');
                 var hearder_top_offset = 0;
                 if ($hearder_top[0]){
@@ -912,7 +896,7 @@
                 indicatorFirstLevel: "",
                 indicatorSecondLevel: "<i class='fa fa-angle-right'></i>"
             });
-            
+
             $("#menuzord-verticalnav").menuzord({
                 align: "right",
                 effect: "slide",
@@ -1051,26 +1035,26 @@
         /* ---------------------------------------------------------------------- */
         TM_verticalTimeline: function() {
             var timelineBlocks = $('.cd-timeline-block'),
-              offset = 0.8;
+                offset = 0.8;
 
             //hide timeline blocks which are outside the viewport
             hideBlocks(timelineBlocks, offset);
 
             //on scolling, show/animate timeline blocks when enter the viewport
             $(window).on('scroll', function(){
-              (!window.requestAnimationFrame)  ? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100) : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
+                (!window.requestAnimationFrame)  ? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100) : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
             });
 
             function hideBlocks(blocks, offset) {
-              blocks.each(function(){
-                ( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
-              });
+                blocks.each(function(){
+                    ( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+                });
             }
 
             function showBlocks(blocks, offset) {
-              blocks.each(function(){
-                ( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-              });
+                blocks.each(function(){
+                    ( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+                });
             }
         },
 
@@ -1094,7 +1078,7 @@
                     var last_child_offset = parseInt(last_child.css('top'), 10);
                     var prev_last_offset  = parseInt(prev_last.css('top'), 10);
                     var offset_icon       = last_child_offset - prev_last_offset;
-                    
+
                     var go_top_to = 0;
                     if(offset_icon){
                         if ( offset_icon <= 87 ){
@@ -1104,7 +1088,7 @@
                             }, 300);
                         }
                     }
-                    
+
                     if( $(this).position().left === 0 ){
                         $(this).removeClass('item-right');
                         $(this).addClass('item-left');
@@ -1115,7 +1099,7 @@
                 });
             }
             timeline_on_left_and_right();
-            
+
             $(window).resize(function() {
                 timeline_on_left_and_right();
             });
@@ -1140,7 +1124,7 @@
                     filter: "*"
                 });
             });
-            
+
             //isotope filter
             $(document.body).on('click', portfolio_filter, function(e) {
                 $(portfolio_filter).removeClass("active");
@@ -1154,7 +1138,7 @@
                 });
                 return false;
             });
-            
+
             THEMEMASCOT.slider.TM_flexslider();
 
         },
@@ -1212,7 +1196,7 @@
             });
         },
 
-        
+
         /* ---------------------------------------------------------------------- */
         /* ----------------------- pie chart / circle skill bar ----------------- */
         /* ---------------------------------------------------------------------- */
@@ -1244,7 +1228,7 @@
                 }
             });
         },
-        
+
         /* ---------------------------------------------------------------------- */
         /* ------------------- progress bar / horizontal skill bar -------------- */
         /* ---------------------------------------------------------------------- */
@@ -1258,7 +1242,7 @@
                     var barcolor = current_item.data('barcolor');
                     current_item.append('<span class="percent">' + percent + '%' + '</span>').css('background-color', barcolor).css('width', percent + '%').addClass('appeared');
                 }
-                
+
             });
         },
 
@@ -1818,7 +1802,7 @@
                 });
             });
 
-            
+
 
             $(".team-carousel-1col").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
@@ -1833,28 +1817,28 @@
                     '<i class="fa fa-angle-right"></i>'
                 ],
                 responsive: {
-                        0: {
-                            items: 1,
-                            center: false
-                        },
-                        600: {
-                            items: 1,
-                            center: false
-                        },
-                        750: {
-                            items: 1,
-                            center: false
-                        },
-                        960: {
-                            items: 1
-                        },
-                        1170: {
-                            items: 1
-                        },
-                        1300: {
-                            items: 1
-                        }
+                    0: {
+                        items: 1,
+                        center: false
+                    },
+                    600: {
+                        items: 1,
+                        center: false
+                    },
+                    750: {
+                        items: 1,
+                        center: false
+                    },
+                    960: {
+                        items: 1
+                    },
+                    1170: {
+                        items: 1
+                    },
+                    1300: {
+                        items: 1
                     }
+                }
             });
 
             $(".services-carousel").owlCarousel({
@@ -1944,7 +1928,7 @@
                 dots: true,
                 nav: false
             });
-            
+
             $(".gallery-list-carosel").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
                 autoplay: false,
@@ -1978,7 +1962,7 @@
                 }
             });
 
-           $(".testimonial-carousel").owlCarousel({
+            $(".testimonial-carousel").owlCarousel({
                 autoplay: false,
                 rtl: THEMEMASCOT.isRTL.check(),
                 autoplayTimeout: 4000,
@@ -2009,7 +1993,7 @@
                         items: 1
                     }
                 }
-            });      
+            });
 
             $(".carousel-2col").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
@@ -2075,7 +2059,7 @@
                         items: 3
                     }
                 }
-            });            
+            });
 
             $(".product-details-carousel").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
@@ -2208,7 +2192,7 @@
                     }
                 }
             });
-            
+
             $(".clients-logo.carousel").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
                 autoplay: true,
@@ -2318,7 +2302,7 @@
                     }
                 });
             });
-            
+
             $(".carousel-slider-four").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
                 autoplay: true,
@@ -2328,10 +2312,10 @@
                 loop: true,
                 dots: false,
                 nav: true,
-                    navText: [
-                        '<i class="fa fa-angle-left"></i>',
-                        '<i class="fa fa-angle-right"></i>'
-                    ],
+                navText: [
+                    '<i class="fa fa-angle-left"></i>',
+                    '<i class="fa fa-angle-right"></i>'
+                ],
                 responsive: {
                     0: {
                         items: 3,
@@ -2441,7 +2425,7 @@
         /* ---------------------------------------------------------------------- */
         /* ----------------------------- BxSlider  ------------------------------ */
         /* ---------------------------------------------------------------------- */
-        TM_bxslider: function() {  
+        TM_bxslider: function() {
             $('.bxslider').bxSlider({
                 mode: 'vertical',
                 minSlides: 3,
@@ -2449,7 +2433,7 @@
                 pager: false,
                 prevText: '<i class="fa fa-angle-left"></i>',
                 nextText: '<i class="fa fa-angle-right"></i>'
-            });   
+            });
         },
 
 
@@ -2485,10 +2469,9 @@
     THEMEMASCOT.documentOnLoad = {
 
         init: function() {
-            
+
             var t = setTimeout(function() {
                 THEMEMASCOT.initialize.TM_wow();
-                THEMEMASCOT.widget.TM_twittie();
                 THEMEMASCOT.initialize.TM_preLoaderOnLoad();
                 THEMEMASCOT.initialize.TM_hashForwarding();
                 THEMEMASCOT.initialize.TM_parallaxBgInit();
