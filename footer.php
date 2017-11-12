@@ -137,11 +137,11 @@
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 </div>
 <!-- end wrapper -->
-<?php wp_footer()?>
 
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->
 <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/js/custom.js"></script>
+<?php wp_footer()?>
 
 </body>
 </html>
